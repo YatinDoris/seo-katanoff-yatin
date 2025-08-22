@@ -50,7 +50,7 @@ export const NavigationHeader = dynamic(
 export const ProfileNavigationHeader = dynamic(
   () => import("./layout/profile/navigationHeader.jsx"),
   {
-    ssr: false,
+    ssr: true,
   }
 );
 

@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { getMenuList } from "@/_actions/home.action";
 import { useEffect, useRef, useState } from "react";
 import {
-  CustomImg,
   ProfileDropdown,
   ProfileNavigationHeader,
   SearchBar,
@@ -19,6 +18,7 @@ import textLogo from "@/assets/images/logo-text.webp";
 import miniLogo from "@/assets/images/mini-logo.webp";
 import CartPopup from "../../ui/CartPopup";
 import { fetchCart } from "@/_actions/cart.action";
+import CustomImg from "@/components/ui/custom-img";
 
 export default function Header() {
   const dispatch = useDispatch();

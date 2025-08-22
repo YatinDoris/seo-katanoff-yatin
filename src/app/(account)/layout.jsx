@@ -1,9 +1,9 @@
-import { Footer } from "@/components/dynamiComponents";
+import { Footer, ProfileHeader } from "@/components/dynamiComponents";
 
 export default function AccountLayout({ children }) {
   return (
     <main>
-      {/* <ProfileHeader /> */}
+      <ProfileHeader />
       {children}
       <Footer />
     </main>

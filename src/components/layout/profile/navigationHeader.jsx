@@ -1,13 +1,16 @@
 "use client";
-import { HeaderLinkButton } from "@/components/ui/button";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { IoIosLogOut, IoIosSearch } from "react-icons/io";
 import { useDispatch, useSelector } from "react-redux";
 import miniLogo from "@/assets/images/mini-logo.webp";
-import { CustomImg, ProfileDropdown } from "../../dynamiComponents";
-import CartPopup from "../../ui/CartPopup";
+import {
+  CartPopup,
+  CustomImg,
+  HeaderLinkButton,
+  ProfileDropdown,
+} from "../../dynamiComponents";
 import { mainHeaderLinks } from "../navigationHeader";
 import Cookies from "js-cookie";
 import { fetchCart } from "@/_actions/cart.action";
