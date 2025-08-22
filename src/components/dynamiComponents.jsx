@@ -7,7 +7,7 @@ export const Header = dynamic(() => import("./layout/header.jsx"), {
 });
 
 export const HeaderLinkButton = dynamic(
-  () => import("./ui/button.jsx").then((mod) => mod.HeaderLinkButton),
+  () => import("./button.jsx").then((mod) => mod.HeaderLinkButton),
   { ssr: true }
 );
 
