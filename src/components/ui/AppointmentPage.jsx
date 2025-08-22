@@ -5,7 +5,7 @@ import { AppointmentForm, HeroBanner } from "@/components/dynamiComponents";
 
 export default function AppointmentPage() {
   return (
-    <div>
+    <>
       <div className="relative w-full">
         <HeroBanner
           staticSrcMobile={bookAppointmentMobile}
@@ -80,6 +80,6 @@ export default function AppointmentPage() {
           <KeyFeatures />
         </section>
       </div>
-    </div>
+    </>
   );
 }
