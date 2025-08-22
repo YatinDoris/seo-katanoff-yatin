@@ -15,13 +15,14 @@ import miniLogo from "@/assets/images/mini-logo.webp";
 import diamondIcon from "@/assets/icons/diamond.svg";
 import flashDeal from "@/assets/images/flash-deal.webp";
 import engagementHeader from "@/assets/images/engagement-header.webp";
-// import
-// CartIconInCheckout,
-// CartPopup,
-// ProfileDropdown,
-// ProgressiveImg,
-// SearchBar,
-// "@/components/dynamiComponents";
+import {
+  CartIconInCheckout,
+  CartPopup,
+  ProfileDropdown,
+  ProgressiveImg,
+  SampleHeaderLinkButton,
+  SearchBar,
+} from "@/components/dynamiComponents";
 import {
   DIAMOND_SHAPE,
   ENGAGEMENT,
@@ -41,7 +42,6 @@ import { helperFunctions } from "@/_helper";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import calendarIcon from "@/assets/icons/calendar.svg";
 import CustomImg from "../ui/custom-img";
-import { SampleHeaderLinkButton } from "../SampleHeaderLinkButton";
 
 const headingClass =
   "font-castoro text-[0.9375em] leading-[1.0625em] mb-4 pb-2 border-b border-baseblack";
@@ -105,39 +105,39 @@ export default function NavigationHeader() {
     dispatch(fetchEngagementCollectionsTypeWiseProduct());
   }, [dispatch]);
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const currentScrollY = window.scrollY;
-  //     dispatch(setLastScrollY(currentScrollY));
-  //     setIsHeaderVisible(currentScrollY > 100);
-  //   };
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      dispatch(setLastScrollY(currentScrollY));
+      setIsHeaderVisible(currentScrollY > 100);
+    };
 
-  //   handleScroll();
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, [dispatch, lastScrollY]);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [dispatch, lastScrollY]);
 
   useEffect(() => {
     loadData();
   }, []);
 
-  // useEffect(() => {
-  //   if (isMenuOpen) {
-  //     document.body.style.overflow = "hidden";
-  //     document.body.style.position = "fixed";
-  //     document.body.style.width = "100%";
-  //   } else {
-  //     document.body.style.overflow = "auto";
-  //     document.body.style.position = "";
-  //     document.body.style.width = "";
-  //   }
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+      document.body.style.position = "fixed";
+      document.body.style.width = "100%";
+    } else {
+      document.body.style.overflow = "auto";
+      document.body.style.position = "";
+      document.body.style.width = "";
+    }
 
-  //   return () => {
-  //     document.body.style.overflow = "auto";
-  //     document.body.style.position = "";
-  //     document.body.style.width = "";
-  //   };
-  // }, [isMenuOpen]);
+    return () => {
+      document.body.style.overflow = "auto";
+      document.body.style.position = "";
+      document.body.style.width = "";
+    };
+  }, [isMenuOpen]);
 
   return (
     <header
@@ -366,7 +366,7 @@ export default function NavigationHeader() {
                                           }}
                                         >
                                           {" "}
-                                          {/* {item?.variationTypeImage ? (
+                                          {item?.variationTypeImage ? (
                                             <ProgressiveImg
                                               src={item?.variationTypeImage}
                                               alt={item?.variationTypeName}
@@ -374,7 +374,7 @@ export default function NavigationHeader() {
                                               width={28}
                                               height={28}
                                             />
-                                          ) : null} */}
+                                          ) : null}
                                           {item.variationTypeName}
                                         </SampleHeaderLinkButton>
                                       )
@@ -646,7 +646,7 @@ export default function NavigationHeader() {
                                           }}
                                         >
                                           {" "}
-                                          {/* {item?.variationTypeImage ? (
+                                          {item?.variationTypeImage ? (
                                             <ProgressiveImg
                                               src={item?.variationTypeImage}
                                               alt={item?.variationTypeName}
@@ -654,7 +654,7 @@ export default function NavigationHeader() {
                                               width={28}
                                               height={28}
                                             />
-                                          ) : null} */}
+                                          ) : null}
                                           {item.variationTypeName}
                                         </SampleHeaderLinkButton>
                                       )
@@ -935,7 +935,7 @@ export default function NavigationHeader() {
         )}
         {lastScrollY > 100 ? (
           <div className="text-xl flex py-4 items-center gap-3">
-            {/* <SearchBar
+            <SearchBar
               isMobile={false}
               searchContainerRef={navSearchContainerRef}
               resultsContainerRef={resultsContainerRef}
@@ -943,12 +943,12 @@ export default function NavigationHeader() {
               mobileSearchInputRef={mobileSearchInputRef}
               lastScrollY={lastScrollY}
               isHeaderVisible={isHeaderVisible}
-            /> */}
-            {/* <ProfileDropdown
+            />
+            <ProfileDropdown
               className={"hidden lg:block"}
               uniqueId={"desktop-nav-profile"}
-            /> */}
-            {/* {!hideCartPopup ? <CartPopup /> : <CartIconInCheckout />} */}
+            />
+            {!hideCartPopup ? <CartPopup /> : <CartIconInCheckout />}
           </div>
         ) : null}
       </nav>
@@ -1171,13 +1171,13 @@ export default function NavigationHeader() {
                                             }}
                                           >
                                             {" "}
-                                            {/* {item?.variationTypeImage ? (
+                                            {item?.variationTypeImage ? (
                                               <ProgressiveImg
                                                 src={item?.variationTypeImage}
                                                 alt={item?.variationTypeName}
                                                 className="w-5 h-5 inline-block"
                                               />
-                                            ) : null} */}
+                                            ) : null}
                                             {item.variationTypeName}
                                           </SampleHeaderLinkButton>
                                         )
@@ -1496,10 +1496,10 @@ export default function NavigationHeader() {
                     </div>
                   );
                 })}
-                {/* <ProfileDropdown
+                <ProfileDropdown
                   className={"block lg:hidden"}
                   uniqueId={"mobile-nav-profile"}
-                /> */}
+                />
               </nav>
             )}
           </div>
