@@ -3,12 +3,12 @@ import dynamic from "next/dynamic";
 
 // Common Component
 export const Header = dynamic(() => import("./layout/header.jsx"), {
-  ssr: false,
+  ssr: true,
 });
 
 export const HeaderLinkButton = dynamic(
   () => import("./button.jsx").then((mod) => mod.HeaderLinkButton),
-  { ssr: false }
+  { ssr: true }
 );
 
 export const SampleHeaderLinkButton = dynamic(
@@ -19,13 +19,13 @@ export const SampleHeaderLinkButton = dynamic(
 );
 
 export const Footer = dynamic(() => import("./layout/footer.jsx"), {
-  ssr: false,
+  ssr: true,
 });
 
 export const ProfileHeader = dynamic(
   () => import("./layout/profile/header.jsx"),
   {
-    ssr: false,
+    ssr: true,
   }
 );
 
