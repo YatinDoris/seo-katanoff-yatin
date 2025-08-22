@@ -105,39 +105,39 @@ export default function NavigationHeader() {
     dispatch(fetchEngagementCollectionsTypeWiseProduct());
   }, [dispatch]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      dispatch(setLastScrollY(currentScrollY));
-      setIsHeaderVisible(currentScrollY > 100);
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const currentScrollY = window.scrollY;
+  //     dispatch(setLastScrollY(currentScrollY));
+  //     setIsHeaderVisible(currentScrollY > 100);
+  //   };
 
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [dispatch, lastScrollY]);
+  //   handleScroll();
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, [dispatch, lastScrollY]);
 
   useEffect(() => {
     loadData();
   }, []);
 
-  useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = "hidden";
-      document.body.style.position = "fixed";
-      document.body.style.width = "100%";
-    } else {
-      document.body.style.overflow = "auto";
-      document.body.style.position = "";
-      document.body.style.width = "";
-    }
+  // useEffect(() => {
+  //   if (isMenuOpen) {
+  //     document.body.style.overflow = "hidden";
+  //     document.body.style.position = "fixed";
+  //     document.body.style.width = "100%";
+  //   } else {
+  //     document.body.style.overflow = "auto";
+  //     document.body.style.position = "";
+  //     document.body.style.width = "";
+  //   }
 
-    return () => {
-      document.body.style.overflow = "auto";
-      document.body.style.position = "";
-      document.body.style.width = "";
-    };
-  }, [isMenuOpen]);
+  //   return () => {
+  //     document.body.style.overflow = "auto";
+  //     document.body.style.position = "";
+  //     document.body.style.width = "";
+  //   };
+  // }, [isMenuOpen]);
 
   return (
     <header
