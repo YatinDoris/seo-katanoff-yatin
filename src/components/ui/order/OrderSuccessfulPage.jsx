@@ -4,20 +4,15 @@ import { CustomImg } from "@/components/dynamiComponents";
 import { PrimaryLinkButton } from "../button";
 import { useParams } from "next/navigation";
 import { helperFunctions } from "../../../_helper/helperFunctions";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { setCartList } from "@/store/slices/cartSlice";
 
 const OrderSuccessfulPage = () => {
   const params = useParams();
   let { orderNumber } = params;
+  const currentUser = helperFunctions.getCurrentUser();
   const dispatch = useDispatch();
-  const [currentUser, setCurrentUser] = useState(null);
-
-  useEffect(() => {
-    const user = helperFunctions.getCurrentUser();
-    setCurrentUser(user);
-  }, []);
 
   useEffect(() => {
     // clear values after payment success
