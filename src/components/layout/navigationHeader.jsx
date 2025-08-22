@@ -954,9 +954,9 @@ export default function NavigationHeader() {
       </nav>
 
       {/* Mobile Menu */}
-      <div>
+      <AnimatePresence>
         {isMenuOpen ? (
-          <div
+          <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
@@ -1502,9 +1502,9 @@ export default function NavigationHeader() {
                 />
               </nav>
             )}
-          </div>
+          </motion.div>
         ) : null}
-      </div>
+      </AnimatePresence>
     </header>
   );
 }
