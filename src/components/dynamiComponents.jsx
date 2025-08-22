@@ -5,6 +5,14 @@ import dynamic from "next/dynamic";
 export const Header = dynamic(() => import("./layout/header.jsx"), {
   ssr: true,
 });
+
+export const SampleHeaderLinkButton = dynamic(
+  () => import("./SampleHeaderLinkButton.jsx"),
+  {
+    ssr: false,
+  }
+);
+
 export const Footer = dynamic(() => import("./layout/footer.jsx"), {
   ssr: true,
 });

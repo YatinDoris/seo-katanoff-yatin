@@ -1,5 +1,4 @@
 "use client";
-import { HeaderLinkButton } from "@/components/ui/button";
 import {
   setIsMenuOpen,
   setLastScrollY,
@@ -42,6 +41,7 @@ import { helperFunctions } from "@/_helper";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import calendarIcon from "@/assets/icons/calendar.svg";
 import CustomImg from "../ui/custom-img";
+import { SampleHeaderLinkButton } from "../SampleHeaderLinkButton";
 
 const headingClass =
   "font-castoro text-[0.9375em] leading-[1.0625em] mb-4 pb-2 border-b border-baseblack";
@@ -189,7 +189,7 @@ export default function NavigationHeader() {
         ) : (
           <ul className={`flex`}>
             <li className={`relative`}>
-              <HeaderLinkButton
+              <SampleHeaderLinkButton
                 href={`/collections/collection/${helperFunctions.stringReplacedWithUnderScore(
                   FLASH_DEALS
                 )}`}
@@ -199,14 +199,14 @@ export default function NavigationHeader() {
                 onClick={closeAllDropdown}
               >
                 {FLASH_DEALS}
-              </HeaderLinkButton>
+              </SampleHeaderLinkButton>
             </li>
             <li
               className={`relative`}
               onMouseEnter={() => dispatch(setOpenDropdown(ENGAGEMENT))}
               onMouseLeave={() => dispatch(setOpenDropdown(null))}
             >
-              <HeaderLinkButton
+              <SampleHeaderLinkButton
                 href={`/collections/collection/${helperFunctions.stringReplacedWithUnderScore(
                   ENGAGEMENT_RINGS
                 )}`}
@@ -216,7 +216,7 @@ export default function NavigationHeader() {
                 onClick={closeAllDropdown}
               >
                 {ENGAGEMENT}
-              </HeaderLinkButton>
+              </SampleHeaderLinkButton>
               {openDropdown === ENGAGEMENT ? (
                 <div
                   className={`fixed left-0 right-0 ${
@@ -315,7 +315,7 @@ export default function NavigationHeader() {
                               <div className="flex flex-col">
                                 {engagementHeaderUniqueFilterOptions?.uniqueSettingStyles.map(
                                   (item, index) => (
-                                    <HeaderLinkButton
+                                    <SampleHeaderLinkButton
                                       key={`variation-${index}4`}
                                       href={`/collections/collection/${helperFunctions.stringReplacedWithUnderScore(
                                         ENGAGEMENT_RINGS
@@ -330,7 +330,7 @@ export default function NavigationHeader() {
                                       }}
                                     >
                                       {item.title}
-                                    </HeaderLinkButton>
+                                    </SampleHeaderLinkButton>
                                   )
                                 )}
                               </div>
@@ -352,7 +352,7 @@ export default function NavigationHeader() {
                                   .flatMap((variation) =>
                                     variation.variationTypes.map(
                                       (item, index) => (
-                                        <HeaderLinkButton
+                                        <SampleHeaderLinkButton
                                           key={`diamond-shape-${index}`}
                                           href={`/collections/collection/${helperFunctions.stringReplacedWithUnderScore(
                                             ENGAGEMENT_RINGS
@@ -376,7 +376,7 @@ export default function NavigationHeader() {
                                             />
                                           ) : null} */}
                                           {item.variationTypeName}
-                                        </HeaderLinkButton>
+                                        </SampleHeaderLinkButton>
                                       )
                                     )
                                   )}
@@ -399,7 +399,7 @@ export default function NavigationHeader() {
                                     {variation.variationName === GOLD_COLOR
                                       ? variation.variationTypes.map(
                                           (item, index) => (
-                                            <HeaderLinkButton
+                                            <SampleHeaderLinkButton
                                               key={`variation-${index}2`}
                                               href={`/collections/collection/${helperFunctions.stringReplacedWithUnderScore(
                                                 ENGAGEMENT_RINGS
@@ -420,7 +420,7 @@ export default function NavigationHeader() {
                                                 }}
                                               ></div>{" "}
                                               {item.variationTypeName}
-                                            </HeaderLinkButton>
+                                            </SampleHeaderLinkButton>
                                           )
                                         )
                                       : null}
@@ -434,7 +434,7 @@ export default function NavigationHeader() {
                           ?.uniqueSettingStyles?.length ||
                         engagementHeaderUniqueFilterOptions?.uniqueVariations
                           ?.length ? (
-                          <HeaderLinkButton
+                          <SampleHeaderLinkButton
                             href={`/collections/collection/${helperFunctions.stringReplacedWithUnderScore(
                               ENGAGEMENT_RINGS
                             )}`}
@@ -445,7 +445,7 @@ export default function NavigationHeader() {
                             className={`transition-all !text-baseblack duration-300 capitalize mt-2 !py-2 hover:!text-white hover:!bg-[#393939] flex justify-center items-center border border-baseblack`}
                           >
                             View All
-                          </HeaderLinkButton>
+                          </SampleHeaderLinkButton>
                         ) : null}
                       </div>
                       <div className=" ">
@@ -457,13 +457,13 @@ export default function NavigationHeader() {
                           className="mb-[22px] w-full"
                         />
                         <div className="flex justify-center">
-                          <HeaderLinkButton
+                          <SampleHeaderLinkButton
                             href={"/customize/select-diamond"}
                             onClick={closeAllDropdown}
                             className={`transition-all !text-baseblack duration-300 capitalize mt-2 !py-2 hover:!text-white hover:!bg-[#393939] flex justify-center items-center border border-baseblack`}
                           >
                             DESIGN WITH DIAMOND
-                          </HeaderLinkButton>
+                          </SampleHeaderLinkButton>
                         </div>
                       </div>
                     </div>
@@ -476,7 +476,7 @@ export default function NavigationHeader() {
               onMouseEnter={() => dispatch(setOpenDropdown(WEDDING))}
               onMouseLeave={() => dispatch(setOpenDropdown(null))}
             >
-              <HeaderLinkButton
+              <SampleHeaderLinkButton
                 href={`/collections/collection/${helperFunctions.stringReplacedWithUnderScore(
                   WEDDING_RINGS
                 )}`}
@@ -486,7 +486,7 @@ export default function NavigationHeader() {
                 onClick={closeAllDropdown}
               >
                 {WEDDING}
-              </HeaderLinkButton>
+              </SampleHeaderLinkButton>
               {openDropdown === WEDDING ? (
                 <div
                   className={`fixed left-0 right-0 ${
@@ -596,7 +596,7 @@ export default function NavigationHeader() {
                               <div className="flex flex-col">
                                 {weddingHeaderUniqueFilterOptions?.femaleFilters?.settingStyles?.map(
                                   (item, index) => (
-                                    <HeaderLinkButton
+                                    <SampleHeaderLinkButton
                                       key={`variation-${index}4`}
                                       href={`/collections/collection/${helperFunctions?.stringReplacedWithUnderScore(
                                         WEDDING_RINGS
@@ -610,7 +610,7 @@ export default function NavigationHeader() {
                                       }}
                                     >
                                       {item.title}
-                                    </HeaderLinkButton>
+                                    </SampleHeaderLinkButton>
                                   )
                                 )}
                               </div>
@@ -632,7 +632,7 @@ export default function NavigationHeader() {
                                   .flatMap((variation) =>
                                     variation.variationTypes.map(
                                       (item, index) => (
-                                        <HeaderLinkButton
+                                        <SampleHeaderLinkButton
                                           key={`diamond-shape-${index}`}
                                           href={`/collections/collection/${helperFunctions?.stringReplacedWithUnderScore(
                                             WEDDING_RINGS
@@ -656,7 +656,7 @@ export default function NavigationHeader() {
                                             />
                                           ) : null} */}
                                           {item.variationTypeName}
-                                        </HeaderLinkButton>
+                                        </SampleHeaderLinkButton>
                                       )
                                     )
                                   )}
@@ -681,7 +681,7 @@ export default function NavigationHeader() {
                                       </h3>
                                       {variation.variationTypes.map(
                                         (item, index) => (
-                                          <HeaderLinkButton
+                                          <SampleHeaderLinkButton
                                             key={`variation-${index}2`}
                                             href={`/collections/collection/${helperFunctions?.stringReplacedWithUnderScore(
                                               WEDDING_RINGS
@@ -702,7 +702,7 @@ export default function NavigationHeader() {
                                               }}
                                             ></div>{" "}
                                             {item.variationTypeName}
-                                          </HeaderLinkButton>
+                                          </SampleHeaderLinkButton>
                                         )
                                       )}
                                     </div>
@@ -711,7 +711,7 @@ export default function NavigationHeader() {
                               )
                             : null}
                         </div>
-                        <HeaderLinkButton
+                        <SampleHeaderLinkButton
                           href={`/collections/collection/${helperFunctions?.stringReplacedWithUnderScore(
                             WEDDING_RINGS
                           )}?gender=female`}
@@ -722,7 +722,7 @@ export default function NavigationHeader() {
                           className={`transition-all !text-baseblack duration-300 capitalize mt-2 !py-2 hover:!text-white hover:!bg-[#393939] flex justify-center items-center border border-baseblack`}
                         >
                           View All
-                        </HeaderLinkButton>
+                        </SampleHeaderLinkButton>
                       </div>
                       <div className="col-span-5">
                         <div className="grid grid-cols-12 gap-8">
@@ -737,7 +737,7 @@ export default function NavigationHeader() {
                                 <div className="flex flex-col">
                                   {weddingHeaderUniqueFilterOptions?.maleFilters?.settingStyles?.map(
                                     (item, index) => (
-                                      <HeaderLinkButton
+                                      <SampleHeaderLinkButton
                                         key={`variation-${index}4`}
                                         href={`/collections/collection/${helperFunctions?.stringReplacedWithUnderScore(
                                           WEDDING_RINGS
@@ -751,13 +751,13 @@ export default function NavigationHeader() {
                                         }}
                                       >
                                         {item.title}
-                                      </HeaderLinkButton>
+                                      </SampleHeaderLinkButton>
                                     )
                                   )}
                                 </div>
                               </div>
                             ) : null}
-                            <HeaderLinkButton
+                            <SampleHeaderLinkButton
                               href={`/collections/collection/${helperFunctions?.stringReplacedWithUnderScore(
                                 WEDDING_RINGS
                               )}?gender=male`}
@@ -768,7 +768,7 @@ export default function NavigationHeader() {
                               className={`transition-all !text-baseblack duration-300 capitalize mt-2 !py-2 hover:!text-white hover:!bg-[#393939] flex justify-center items-center border border-baseblack`}
                             >
                               View All
-                            </HeaderLinkButton>
+                            </SampleHeaderLinkButton>
                           </div>
                           <div className="col-span-7">
                             <h3
@@ -778,7 +778,7 @@ export default function NavigationHeader() {
                             </h3>
                             <CustomImg srcAttr={flashDeal} />{" "}
                             <div className="flex justify-center pt-3">
-                              <HeaderLinkButton
+                              <SampleHeaderLinkButton
                                 href={`/collections/collection/${helperFunctions.stringReplacedWithUnderScore(
                                   FLASH_DEALS
                                 )}`}
@@ -789,7 +789,7 @@ export default function NavigationHeader() {
                                 className={`transition-all w-fit !text-baseblack duration-300 capitalize mt-2 !py-2 hover:!text-white hover:!bg-[#393939] flex justify-center items-center border border-baseblack`}
                               >
                                 View All
-                              </HeaderLinkButton>
+                              </SampleHeaderLinkButton>
                             </div>
                           </div>
                         </div>
@@ -813,7 +813,7 @@ export default function NavigationHeader() {
                   }
                   onMouseLeave={() => dispatch(setOpenDropdown(null))}
                 >
-                  <HeaderLinkButton
+                  <SampleHeaderLinkButton
                     href={item.href}
                     className={`rounded-none flex items-center gap-1 hover:!text-primary hover:!font-semibold ${
                       lastScrollY > 100 ? "!py-2 lg:!py-5" : "!py-4"
@@ -821,7 +821,7 @@ export default function NavigationHeader() {
                     onClick={closeAllDropdown}
                   >
                     {item?.title}
-                  </HeaderLinkButton>
+                  </SampleHeaderLinkButton>
 
                   {/* Dropdown for Desktop */}
                   {hasSubCategories && openDropdown === item.title ? (
@@ -840,7 +840,7 @@ export default function NavigationHeader() {
                                 key={`${subItem.title}-${index}`}
                                 className={`w-[14%] relative`}
                               >
-                                <HeaderLinkButton
+                                <SampleHeaderLinkButton
                                   href={subItem.href}
                                   className="block text-sm !font-semibold capitalize !p-[10px]"
                                   onClick={(e) => {
@@ -849,12 +849,12 @@ export default function NavigationHeader() {
                                   }}
                                 >
                                   {subItem.title}
-                                </HeaderLinkButton>
+                                </SampleHeaderLinkButton>
                                 <div className="flex flex-col">
                                   {subItem?.productTypes?.length
                                     ? subItem?.productTypes.map(
                                         (productType, index) => (
-                                          <HeaderLinkButton
+                                          <SampleHeaderLinkButton
                                             key={`${productType.title}-${index}`}
                                             href={productType.href}
                                             className="!text-[12px] 2xl:!text-[13px] !leading-[1em] font-medium gap-2 text-baseblack transition-all hover:text-primary hover:!font-semibold !p-[10px] hover:bg-[#F3F3F4] duration-300 capitalize"
@@ -864,11 +864,11 @@ export default function NavigationHeader() {
                                             }}
                                           >
                                             {productType.title}
-                                          </HeaderLinkButton>
+                                          </SampleHeaderLinkButton>
                                         )
                                       )
                                     : null}
-                                  <HeaderLinkButton
+                                  <SampleHeaderLinkButton
                                     href={subItem.href}
                                     onClick={(e) => {
                                       e.stopPropagation();
@@ -877,13 +877,13 @@ export default function NavigationHeader() {
                                     className={`transition-all duration-300 w-full capitalize mt-2 !px-3 !py-1.5 hover:text-white hover:!bg-[#393939] flex justify-center items-center border border-baseblack`}
                                   >
                                     View All
-                                  </HeaderLinkButton>
+                                  </SampleHeaderLinkButton>
                                 </div>
                               </div>
                             ))}
                         </div>
                         <div className="ps-10 w-[30%]">
-                          <HeaderLinkButton
+                          <SampleHeaderLinkButton
                             href={`/collections/collection/Special_Buys`}
                             className="block text-sm !font-semibold capitalize !py-[10px] !px-0 mb-3"
                             onClick={(e) => {
@@ -892,7 +892,7 @@ export default function NavigationHeader() {
                             }}
                           >
                             Special buys
-                          </HeaderLinkButton>
+                          </SampleHeaderLinkButton>
                           <CustomImg
                             srcAttr={jewelry}
                             className="w-full"
@@ -921,14 +921,14 @@ export default function NavigationHeader() {
 
             {staticLinks?.map((link) => (
               <li key={`static-link-${link.title}`} className={`relative `}>
-                <HeaderLinkButton
+                <SampleHeaderLinkButton
                   href={link.href}
                   className={`rounded-none hover:!font-semibold flex items-center gap-1 hover:!text-primary ${
                     lastScrollY > 100 ? "py-2 lg:py-5" : "py-4"
                   }`}
                 >
                   {link.title}
-                </HeaderLinkButton>
+                </SampleHeaderLinkButton>
               </li>
             ))}
           </ul>
@@ -983,7 +983,7 @@ export default function NavigationHeader() {
                 style={{ maxHeight: "calc(100vh - 60px)" }}
               >
                 <div className="border-t py-3.5">
-                  <HeaderLinkButton
+                  <SampleHeaderLinkButton
                     href={`/collections/collection/${helperFunctions.stringReplacedWithUnderScore(
                       FLASH_DEALS
                     )}`}
@@ -991,7 +991,7 @@ export default function NavigationHeader() {
                     onClick={() => dispatch(setIsMenuOpen(false))}
                   >
                     {FLASH_DEALS}
-                  </HeaderLinkButton>
+                  </SampleHeaderLinkButton>
                 </div>
                 <div>
                   <div
@@ -1006,7 +1006,7 @@ export default function NavigationHeader() {
                       )
                     }
                   >
-                    <HeaderLinkButton
+                    <SampleHeaderLinkButton
                       href={`/collections/collection/${helperFunctions.stringReplacedWithUnderScore(
                         ENGAGEMENT_RINGS
                       )}`}
@@ -1014,7 +1014,7 @@ export default function NavigationHeader() {
                       onClick={() => dispatch(setIsMenuOpen(false))}
                     >
                       {ENGAGEMENT}
-                    </HeaderLinkButton>
+                    </SampleHeaderLinkButton>
                     <div className="text-base px-[10px] pb-0.5">
                       <IoIosArrowDown
                         className={`transition-all duration-300 ease-in-out transform ${
@@ -1119,7 +1119,7 @@ export default function NavigationHeader() {
                                 <div className="ps-3 flex flex-col gap-1">
                                   {engagementHeaderUniqueFilterOptions?.uniqueSettingStyles.map(
                                     (item, index) => (
-                                      <HeaderLinkButton
+                                      <SampleHeaderLinkButton
                                         key={`variation-${index}4`}
                                         href={`/collections/collection/${helperFunctions.stringReplacedWithUnderScore(
                                           ENGAGEMENT_RINGS
@@ -1133,7 +1133,7 @@ export default function NavigationHeader() {
                                         }}
                                       >
                                         {item.title}
-                                      </HeaderLinkButton>
+                                      </SampleHeaderLinkButton>
                                     )
                                   )}
                                 </div>
@@ -1157,7 +1157,7 @@ export default function NavigationHeader() {
                                     .flatMap((variation) =>
                                       variation.variationTypes.map(
                                         (item, index) => (
-                                          <HeaderLinkButton
+                                          <SampleHeaderLinkButton
                                             key={`mobile-variation-${index}`}
                                             href={`/collections/collection/${helperFunctions.stringReplacedWithUnderScore(
                                               ENGAGEMENT_RINGS
@@ -1179,7 +1179,7 @@ export default function NavigationHeader() {
                                               />
                                             ) : null} */}
                                             {item.variationTypeName}
-                                          </HeaderLinkButton>
+                                          </SampleHeaderLinkButton>
                                         )
                                       )
                                     )}
@@ -1204,7 +1204,7 @@ export default function NavigationHeader() {
                                         {variation.variationName === GOLD_COLOR
                                           ? variation.variationTypes.map(
                                               (item, index) => (
-                                                <HeaderLinkButton
+                                                <SampleHeaderLinkButton
                                                   key={`sm-variation-${index}-child`}
                                                   href={`/collections/collection/${helperFunctions.stringReplacedWithUnderScore(
                                                     ENGAGEMENT_RINGS
@@ -1228,7 +1228,7 @@ export default function NavigationHeader() {
                                                     }}
                                                   ></div>{" "}
                                                   {item.variationTypeName}
-                                                </HeaderLinkButton>
+                                                </SampleHeaderLinkButton>
                                               )
                                             )
                                           : null}
@@ -1289,7 +1289,7 @@ export default function NavigationHeader() {
                         />
                         <div className="ps-[10px] pe-[20px] mt-4">
                           {" "}
-                          <HeaderLinkButton
+                          <SampleHeaderLinkButton
                             href={"/customize/select-diamond"}
                             onClick={(e) => {
                               e.stopPropagation();
@@ -1298,7 +1298,7 @@ export default function NavigationHeader() {
                             className={` transition-all !text-baseblack duration-300 capitalize mt-2 !py-2 hover:!text-white hover:!bg-[#393939] flex justify-center items-center border border-baseblack`}
                           >
                             DESIGN WITH DIAMOND
-                          </HeaderLinkButton>
+                          </SampleHeaderLinkButton>
                         </div>
                       </div>
                     </div>
@@ -1316,7 +1316,7 @@ export default function NavigationHeader() {
                       )
                     }
                   >
-                    <HeaderLinkButton
+                    <SampleHeaderLinkButton
                       href={`/collections/collection/${helperFunctions.stringReplacedWithUnderScore(
                         WEDDING_RINGS
                       )}`}
@@ -1324,7 +1324,7 @@ export default function NavigationHeader() {
                       onClick={() => dispatch(setIsMenuOpen(false))}
                     >
                       {WEDDING}
-                    </HeaderLinkButton>
+                    </SampleHeaderLinkButton>
                     <div className="text-base px-[10px] pb-0.5">
                       <IoIosArrowDown
                         className={`transition-all duration-300 ease-in-out transform ${
@@ -1345,7 +1345,7 @@ export default function NavigationHeader() {
                     }`}
                   >
                     <div className="flex flex-col mt-2 ps-3">
-                      <HeaderLinkButton
+                      <SampleHeaderLinkButton
                         href={`/collections/collection/${helperFunctions?.stringReplacedWithUnderScore(
                           WEDDING_RINGS
                         )}?gender=female`}
@@ -1355,8 +1355,8 @@ export default function NavigationHeader() {
                         }}
                       >
                         WOMEN
-                      </HeaderLinkButton>
-                      <HeaderLinkButton
+                      </SampleHeaderLinkButton>
+                      <SampleHeaderLinkButton
                         href={`/collections/collection/${helperFunctions?.stringReplacedWithUnderScore(
                           WEDDING_RINGS
                         )}?gender=male`}
@@ -1366,7 +1366,7 @@ export default function NavigationHeader() {
                         }}
                       >
                         MEN
-                      </HeaderLinkButton>
+                      </SampleHeaderLinkButton>
                     </div>
                   </div>
                 </div>
@@ -1390,13 +1390,13 @@ export default function NavigationHeader() {
                           )
                         }
                       >
-                        <HeaderLinkButton
+                        <SampleHeaderLinkButton
                           href={item.href}
                           className="text-baseblack !px-[10px] hover:text-primary py-0.5"
                           onClick={() => dispatch(setIsMenuOpen(false))}
                         >
                           {item.title}
-                        </HeaderLinkButton>
+                        </SampleHeaderLinkButton>
                         <div className="text-base px-[10px] pb-0.5">
                           <IoIosArrowDown
                             className={`transition-all duration-300 ease-in-out transform ${
@@ -1436,7 +1436,7 @@ export default function NavigationHeader() {
                               key={`${subItem.title}-${index}5`}
                             >
                               <div className="relative">
-                                <HeaderLinkButton
+                                <SampleHeaderLinkButton
                                   href={subItem.href}
                                   className="!font-semibold !p-[10px] !text-[0.875em] leading-[1em] text-baseblack capitalize"
                                   onClick={() => {
@@ -1444,7 +1444,7 @@ export default function NavigationHeader() {
                                   }}
                                 >
                                   {subItem.title}
-                                </HeaderLinkButton>
+                                </SampleHeaderLinkButton>
                               </div>
                             </div>
                           ))}
@@ -1458,13 +1458,13 @@ export default function NavigationHeader() {
                     className="py-3.5 border-t"
                     key={`static-link-${index}12`}
                   >
-                    <HeaderLinkButton
+                    <SampleHeaderLinkButton
                       onClick={() => dispatch(setIsMenuOpen(false))}
                       href={link.href}
                       className="!px-[10px]"
                     >
                       {link.title}
-                    </HeaderLinkButton>
+                    </SampleHeaderLinkButton>
                   </div>
                 ))}
                 {mainHeaderLinks?.map((item, index) => {
@@ -1473,7 +1473,7 @@ export default function NavigationHeader() {
                       className="py-3.5 border-t"
                       key={`header-static-link-${index}`}
                     >
-                      <HeaderLinkButton
+                      <SampleHeaderLinkButton
                         href={item.href}
                         className="!text-[14px] !uppercase flex items-center font-medium gap-2 text-baseblack transition-all hover:text-primary hover:!font-semibold !px-[10px] !p-0 duration-300"
                         onClick={(e) => {
@@ -1492,7 +1492,7 @@ export default function NavigationHeader() {
                           item.icon
                         ) : null}
                         {item.title}
-                      </HeaderLinkButton>
+                      </SampleHeaderLinkButton>
                     </div>
                   );
                 })}
