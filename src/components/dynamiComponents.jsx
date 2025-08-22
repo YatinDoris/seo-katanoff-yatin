@@ -6,6 +6,11 @@ export const Header = dynamic(() => import("./layout/header.jsx"), {
   ssr: true,
 });
 
+export const HeaderLinkButton = dynamic(
+  () => import("./button.jsx").then((mod) => mod.HeaderLinkButton),
+  { ssr: true }
+);
+
 export const SampleHeaderLinkButton = dynamic(
   () => import("./SampleHeaderLinkButton.jsx"),
   {
