@@ -19,7 +19,7 @@ import engagementHeader from "@/assets/images/engagement-header.webp";
 import {
   // CartIconInCheckout,
   // CartPopup,
-  ProfileDropdown,
+  // ProfileDropdown,
   ProgressiveImg,
   // SearchBar,
 } from "@/components/dynamiComponents";
@@ -1496,10 +1496,10 @@ export default function NavigationHeader() {
                     </div>
                   );
                 })}
-                <ProfileDropdown
+                {/* <ProfileDropdown
                   className={"block lg:hidden"}
                   uniqueId={"mobile-nav-profile"}
-                />
+                /> */}
               </nav>
             )}
           </motion.div>
