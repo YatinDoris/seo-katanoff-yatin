@@ -1,8 +1,6 @@
 // import { generateMetadata } from "@/_utils/metaConfig";
 // import { WebsiteUrl } from "@/_helper";
 
-import Head from "next/head";
-
 // const META_TITLE = "About Katanoff | Fine Jewelry & Unique Craftsmanship";
 // const META_DESCRIPTION =
 //   "At Katanoff, we create timeless jewelry with exceptional craftsmanship and elegant designs. Our passion for fine jewelry inspires every collection, offering clients lasting beauty and value.";
@@ -17,15 +15,5 @@ import Head from "next/head";
 //   url: CANONICAL_URL,
 // });
 export default function AboutLayout({ children }) {
-  const canonicalUrl = "https://seo-katanoff-yatin.vercel.app/about-us";
-  return (
-    <>
-      <Head>
-        <title>About Us | Katandoff</title>
-        <link rel="canonical" href={canonicalUrl} />
-        <meta name="robots" content="index, follow" />
-      </Head>
-      {children}
-    </>
-  );
+  return <div>{children}</div>;
 }
