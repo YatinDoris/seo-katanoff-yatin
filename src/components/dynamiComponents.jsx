@@ -7,15 +7,8 @@ export const Header = dynamic(() => import("./layout/header.jsx"), {
 });
 
 export const HeaderLinkButton = dynamic(
-  () => import("./button.jsx").then((mod) => mod.HeaderLinkButton),
+  () => import("./ui/button.jsx").then((mod) => mod.HeaderLinkButton),
   { ssr: true }
-);
-
-export const SampleHeaderLinkButton = dynamic(
-  () => import("./SampleHeaderLinkButton.jsx"),
-  {
-    ssr: false,
-  }
 );
 
 export const Footer = dynamic(() => import("./layout/footer.jsx"), {
