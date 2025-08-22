@@ -1,3 +1,4 @@
+"use client";
 import { memo, useEffect, useState, useMemo } from "react";
 import Image from "next/image";
 import logo from "@/assets/images/logo.webp";
