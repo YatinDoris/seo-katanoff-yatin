@@ -16,13 +16,13 @@ import miniLogo from "@/assets/images/mini-logo.webp";
 import diamondIcon from "@/assets/icons/diamond.svg";
 import flashDeal from "@/assets/images/flash-deal.webp";
 import engagementHeader from "@/assets/images/engagement-header.webp";
-import {
-  // CartIconInCheckout,
-  // CartPopup,
-  // ProfileDropdown,
-  ProgressiveImg,
-  // SearchBar,
-} from "@/components/dynamiComponents";
+// import
+// CartIconInCheckout,
+// CartPopup,
+// ProfileDropdown,
+// ProgressiveImg,
+// SearchBar,
+// "@/components/dynamiComponents";
 import {
   DIAMOND_SHAPE,
   ENGAGEMENT,
@@ -366,7 +366,7 @@ export default function NavigationHeader() {
                                           }}
                                         >
                                           {" "}
-                                          {item?.variationTypeImage ? (
+                                          {/* {item?.variationTypeImage ? (
                                             <ProgressiveImg
                                               src={item?.variationTypeImage}
                                               alt={item?.variationTypeName}
@@ -374,7 +374,7 @@ export default function NavigationHeader() {
                                               width={28}
                                               height={28}
                                             />
-                                          ) : null}
+                                          ) : null} */}
                                           {item.variationTypeName}
                                         </HeaderLinkButton>
                                       )
@@ -646,7 +646,7 @@ export default function NavigationHeader() {
                                           }}
                                         >
                                           {" "}
-                                          {item?.variationTypeImage ? (
+                                          {/* {item?.variationTypeImage ? (
                                             <ProgressiveImg
                                               src={item?.variationTypeImage}
                                               alt={item?.variationTypeName}
@@ -654,7 +654,7 @@ export default function NavigationHeader() {
                                               width={28}
                                               height={28}
                                             />
-                                          ) : null}
+                                          ) : null} */}
                                           {item.variationTypeName}
                                         </HeaderLinkButton>
                                       )
@@ -1171,13 +1171,13 @@ export default function NavigationHeader() {
                                             }}
                                           >
                                             {" "}
-                                            {item?.variationTypeImage ? (
+                                            {/* {item?.variationTypeImage ? (
                                               <ProgressiveImg
                                                 src={item?.variationTypeImage}
                                                 alt={item?.variationTypeName}
                                                 className="w-5 h-5 inline-block"
                                               />
-                                            ) : null}
+                                            ) : null} */}
                                             {item.variationTypeName}
                                           </HeaderLinkButton>
                                         )
