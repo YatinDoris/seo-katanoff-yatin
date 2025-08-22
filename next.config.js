@@ -3,6 +3,10 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  turbopack: {
+    enabled: true,
+  },
+
   reactStrictMode: false,
 };
 
