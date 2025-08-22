@@ -433,3 +433,7 @@ export const ProfileDropdown = dynamic(
     ssr: false,
   }
 );
+
+export const Spinner = dynamic(() => import("./ui/Spinner.jsx"), {
+  ssr: false,
+});
