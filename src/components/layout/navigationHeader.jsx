@@ -21,7 +21,7 @@ import {
   // CartPopup,
   ProfileDropdown,
   ProgressiveImg,
-  SearchBar,
+  // SearchBar,
 } from "@/components/dynamiComponents";
 import {
   DIAMOND_SHAPE,
@@ -935,7 +935,7 @@ export default function NavigationHeader() {
         )}
         {lastScrollY > 100 ? (
           <div className="text-xl flex py-4 items-center gap-3">
-            <SearchBar
+            {/* <SearchBar
               isMobile={false}
               searchContainerRef={navSearchContainerRef}
               resultsContainerRef={resultsContainerRef}
@@ -943,11 +943,11 @@ export default function NavigationHeader() {
               mobileSearchInputRef={mobileSearchInputRef}
               lastScrollY={lastScrollY}
               isHeaderVisible={isHeaderVisible}
-            />
-            <ProfileDropdown
+            /> */}
+            {/* <ProfileDropdown
               className={"hidden lg:block"}
               uniqueId={"desktop-nav-profile"}
-            />
+            /> */}
             {/* {!hideCartPopup ? <CartPopup /> : <CartIconInCheckout />} */}
           </div>
         ) : null}

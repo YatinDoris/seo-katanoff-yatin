@@ -6,7 +6,7 @@ import {
   CartIconInCheckout,
   CartPopup,
   ProfileDropdown,
-  // NavigationHeader,
+  NavigationHeader,
   SearchBar,
 } from "@/components/dynamiComponents";
 import {
@@ -226,7 +226,7 @@ export default function Header() {
           lastScrollY={lastScrollY}
           isHeaderVisible={isHeaderVisible}
         />
-        {/* <NavigationHeader /> */}
+        <NavigationHeader />
       </header>
     </>
   );
