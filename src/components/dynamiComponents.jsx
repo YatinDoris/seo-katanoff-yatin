@@ -30,7 +30,7 @@ export const StoreProvider = dynamic(() => import("@/store/provider"), {
 export const NavigationHeader = dynamic(
   () => import("./layout/navigationHeader"),
   {
-    ssr: true,
+    ssr: false,
   }
 );
 
