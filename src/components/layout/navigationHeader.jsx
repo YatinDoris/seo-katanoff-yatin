@@ -20,7 +20,6 @@ import {
   CartPopup,
   ProfileDropdown,
   ProgressiveImg,
-  SampleHeaderLinkButton,
   SearchBar,
 } from "@/components/dynamiComponents";
 import {
@@ -42,6 +41,7 @@ import { helperFunctions } from "@/_helper";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import calendarIcon from "@/assets/icons/calendar.svg";
 import CustomImg from "../ui/custom-img";
+import SampleHeaderLinkButton from "../SampleHeaderLinkButton";
 
 const headingClass =
   "font-castoro text-[0.9375em] leading-[1.0625em] mb-4 pb-2 border-b border-baseblack";
