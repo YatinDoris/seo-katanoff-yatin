@@ -6,7 +6,7 @@ import {
   setOpenDropdown,
   setOpenDropdownMobile,
 } from "@/store/slices/commonSlice";
-import { AnimatePresence, motion } from "framer-motion";
+// import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import jewelry from "@/assets/images/jewelry.webp";
 import { useCallback, useEffect, useState, useRef } from "react";
@@ -954,9 +954,9 @@ export default function NavigationHeader() {
       </nav>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
+      <div>
         {isMenuOpen ? (
-          <motion.div
+          <div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
@@ -1502,9 +1502,9 @@ export default function NavigationHeader() {
                 /> */}
               </nav>
             )}
-          </motion.div>
+          </div>
         ) : null}
-      </AnimatePresence>
+      </div>
     </header>
   );
 }
